@@ -15,12 +15,13 @@
 /* Статистика */
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 12px;
   margin-bottom: 28px;
 }
 .stat-card { padding: 20px; border-radius: var(--taskflow-radius); background: #eff6ff; color: #1d4ed8; }
 .stat-card-success { background: #ecfdf5; color: #047857; }
+.stat-card-warning { background: #fffbeb; color: #b45309; }
 .stat-card .icon { font-size: 24px; }
 .stat-value { margin-top: 14px; font-size: 30px; font-weight: 700; }
 .stat-label { margin-top: 4px; font-size: 13px; }
@@ -83,7 +84,8 @@
 }
 .app-tabbar .link .icon { font-size: 22px; }
 .app-tab-label { font-size: 11px; white-space: nowrap; }
-.app-tabbar .app-link-active { color: var(--taskflow-primary); }
+.app-tabbar .app-link-active { color: #7c3aed; font-weight: 600; }
+.app-tabbar .link:focus-visible { outline: 2px solid #7c3aed; outline-offset: -2px; }
 
 /* Адаптивність */
 @media (max-width: 360px) {
